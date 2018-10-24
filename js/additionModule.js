@@ -1,6 +1,6 @@
 var additionModule = angular.module('additionModule', []);
 
-additionModule.controller('ctrl1', function($scope) {
+additionModule.controller('additionModuleController', function($scope) {
   $scope.first = 1;
   $scope.second = 1;
 
