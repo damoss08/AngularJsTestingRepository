@@ -1,5 +1,10 @@
 <!doctype html>
-<html ng-app="additionModule">
+<html ng-app="additionModule" ng-init="person={fName: 'David', lName: 'Moss'};
+                                      capitals=[
+                                      {city: 'Farmington', state: 'Minnesota'},
+                                      {city: 'Crystal', state: 'Virginia'},
+                                      {city: 'Columbus', state: 'Ohio'}
+                                      ]">
 
 <head>
   <title>AngularJs</title>
@@ -14,6 +19,18 @@
   </br>
 </br>
 {{calculation}}
+<p>5 + 5 = {{5+5}} </p>
+<p>Your first value is {{first}}</p>
+
+<p>Your second value is <span data-ng-bind="second"></span></p>
+<p>{{person.fName + " " + person.lName}} you entered {{first +
+    " and " + second}}</p>
+
+    <ul>
+      <li ng-repeat="capital in capitals">
+        {{'City: ' + capital.city + ', State: ' + capital.state}}
+      </li>
+    </ul>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="js/additionModule.js"></script>
